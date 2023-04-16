@@ -54,26 +54,12 @@ namespace EZVHD
             switch (mode)
             {
                 case 1:
-
                     //Attach
-                    ProcessStartInfo diskpartProcess = new ProcessStartInfo("diskpart.exe");
-                    diskpartProcess.UseShellExecute = false;
-                    diskpartProcess.CreateNoWindow = true;
-                    diskpartProcess.RedirectStandardInput = true;
-                    diskpartProcess.RedirectStandardOutput = true;
-
-                    Process proc = Process.Start(diskpartProcess);
-
-                    proc.StandardInput.WriteLine("select vdisk FILE=\"{0}\"", filePath);
-                    proc.StandardInput.WriteLine("attach vdisk");
-                    proc.StandardInput.WriteLine("exit");
-                    proc.StandardInput.Flush();
-                    proc.StandardInput.Close();
-
-                    proc.WaitForExit();
+                    AttachVdisk(1, filePath);
                     break;
                 case 2:
-                    // まだ未定
+                    //Attach ReadOnly
+                    AttachVdisk(2, filePath);
                     break;
                 default:
                     MessageBox.Show("指定された引数は存在しません。", "EzVHD Tools", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -170,6 +156,37 @@ namespace EZVHD
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+        }
+
+        static void AttachVdisk(int mode, string filePath)
+        {
+            ProcessStartInfo diskpartProcess = new ProcessStartInfo("diskpart.exe");
+            diskpartProcess.UseShellExecute = false;
+            diskpartProcess.CreateNoWindow = true;
+            diskpartProcess.RedirectStandardInput = true;
+            diskpartProcess.RedirectStandardOutput = true;
+
+            Process proc = Process.Start(diskpartProcess);
+            if (mode == 1)
+            {
+                proc.StandardInput.WriteLine("select vdisk FILE=\"{0}\"", filePath);
+                proc.StandardInput.WriteLine("attach vdisk");
+                proc.StandardInput.WriteLine("exit");
+                proc.StandardInput.Flush();
+                proc.StandardInput.Close();
+
+                proc.WaitForExit();
+            }
+            if (mode == 2)
+            {
+                proc.StandardInput.WriteLine("select vdisk FILE=\"{0}\"", filePath);
+                proc.StandardInput.WriteLine("attach vdisk readonly");
+                proc.StandardInput.WriteLine("exit");
+                proc.StandardInput.Flush();
+                proc.StandardInput.Close();
+
+                proc.WaitForExit();
             }
         }
 
