@@ -1,0 +1,8 @@
+E:\src\VS\repos\ConsoleApp1\ConsoleApp1\bin\Release\EzVHDTool.exe.config
+E:\src\VS\repos\ConsoleApp1\ConsoleApp1\bin\Release\EzVHDTool.exe
+E:\src\VS\repos\ConsoleApp1\ConsoleApp1\bin\Release\EzVHDTool.pdb
+E:\src\VS\repos\ConsoleApp1\ConsoleApp1\obj\Release\ConsoleApp1.csproj.AssemblyReference.cache
+E:\src\VS\repos\ConsoleApp1\ConsoleApp1\obj\Release\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+E:\src\VS\repos\ConsoleApp1\ConsoleApp1\obj\Release\ConsoleApp1.csproj.CoreCompileInputs.cache
+E:\src\VS\repos\ConsoleApp1\ConsoleApp1\obj\Release\EzVHDTool.exe
+E:\src\VS\repos\ConsoleApp1\ConsoleApp1\obj\Release\EzVHDTool.pdb
