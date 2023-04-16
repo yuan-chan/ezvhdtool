@@ -5,9 +5,9 @@ EzVHDTool is a tool to simplify the process of mounting Virtual Hard Disk (VHD) 
 If you have a VHD on a network drive, you can still use EzVHDTool to mount VHD files directly from the Windows ContextMenu.
 ___
 ## Table of Contents
-- [TL;DR](https://github.com/yuan-chan/ezvhdtool/tldr)
-- [Motivation](https://github.com/yuan-chan/ezvhdtool/Motivation)
-- [Usage](https://github.com/yuan-chan/ezvhdtool/Usage)
+- [TL;DR](https://github.com/yuan-chan/ezvhdtool#tldr)
+- [Motivation](https://github.com/yuan-chan/ezvhdtool#Motivation)
+- [Usage](https://github.com/yuan-chan/ezvhdtool#Usage)
 
 ## TL;DR
 Software that allows you to easily mount a VHD on a network drive without errors.
